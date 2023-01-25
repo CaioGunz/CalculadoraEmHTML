@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<style>
+			.calculator-container {
+				width: 300px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.input {
+				width: 100%;
+				padding: 12px 20px;
+				margin: 8px 0;
+				box-sizing: border-box;
+				border: 2px solid #ccc;
+				border-radius: 4px;
+			}
+			#calculate-btn {
+				width: 100%;
+				background-color: #2c70ef;
+				color: white;
+				padding: 14px 20px;
+				margin: 8px 0;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>	
+		<script>
+			function calculate() {
+				let a = document.getElementById("LadoA").value;
+				let b = document.getElementById("LadoB").value;
+				let c = Math.sqrt(a*a + b*b);
+				document.getElementById("LadoC").value = c;
+			}
+		</script>
+			<div class="Calculator-container">
+				<form>
+				<label>
+					<span>Lado A:</span>
+					<input type="number" id="LadoA" class="input">
+				</label>
+				<label>
+					<span>Lado B:</span>
+					<input type="number" id="LadoB" class="input">
+				</label>
+				<button type="button" id="calculate-btn" onclick="calculate()">Calcular</button>
+				<label>
+					<span>Lado C:</span>
+					<input type="number" id="LadoC" class="input" readonly>
+				</label>
+				</form>
+			</div>
+	</body>
+</html>  
